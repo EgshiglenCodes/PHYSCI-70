@@ -2289,8 +2289,8 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #f2849e;
-			box-shadow: 0 0 0 1px #f2849e;
+			border-color: #84a7f2;
+			box-shadow: 0 0 0 1px #8b84f2;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2720,27 +2720,27 @@ input, select, textarea {
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
-			}
-
-			.tiles article.style5 > .image:before {
-				background-color: #B6E2DD;
-			}
-
-			.tiles article.style6 > .image:before {
-				background-color: #C8DDBB;
+				background-color: #ff9db4;
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #FBDF9D;
+				background-color: #ffda09;
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #FBC99D;
+				background-color: #c2eeff;
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #FF9E86;
+				background-color: #b9ffc5;
+			}
+
+			.tiles article.style5 > .image:before {
+				background-color: #f1ceff;
+			}
+
+			.tiles article.style6 > .image:before {
+				background-color: #ffdc9b;
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -2871,7 +2871,7 @@ input, select, textarea {
 
 		#header nav {
 			position: fixed;
-			right: 2em;
+			right: 0em;
 			top: 2em;
 			z-index: 10000;
 		}
@@ -3209,16 +3209,18 @@ a{
 	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
-	height:15vw;
-	min-height:100px;
+	height:25vw;
+	min-height:200px;
 	max-height:550px;
 	min-width:300px;
 	color:rgb(255, 255, 255);
-	background: rgba(65, 154, 255, 0.685);
+	background: linear-gradient(to bottom, rgb(255, 147, 147) 45%,rgb(255, 255, 255) 90%);
+	animation: linear 10ms infinite alternate;
 	width:100%;
 	padding:10% 10% 0 10%;
 	text-align:center;
 	text-shadow:0 4px 6px rgba(5, 5, 5, 0.4)
+	
 
   }
   .menu{
@@ -3253,4 +3255,9 @@ a{
 	0% { transform: scale(1) translateY(0px)}
 	50% { transform: scale(1.2) translateY(-400px)}
   }
-  
+
+  .fit {
+	max-width: 50%;
+	max-height: 100vh;
+	margin: 0 25%;
+  }
