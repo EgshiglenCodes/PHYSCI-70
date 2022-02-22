@@ -35,8 +35,6 @@
 					<div class="miniheader">
 						<div>
 						<h1>Week 3: Hand Tools & Fabrication</h1>
-                            <hr>
-                        Motorized Rocking Horse
 						</div>
 					</div>
 
@@ -44,36 +42,54 @@
 				<div id="main">
 					<div class="inner">
 						<h2> Motorized Rocking Horse</h2>
-                            <img class="fit" src="images/week3/final.gif" alt="Final">
-                            <pr>  Our assignment this week was to create a kinetic sculpture that made use of an electronic circuit. I created a motor-driven rocking horse with a speed control provided by a potentiometer. </pr>
                         
-                        <h5> Inspiration </h5>
+                        <h5> Prompt & Inspiration </h5>
+                            <img class="fit" src="https://image.winudf.com/v2/image/Y29tLm1vbmRyb2lkLnV2Z3VuX3NjcmVlbnNob3RzXzVfNmEyMGNiOWI/screen-5.jpg?fakeurl=1&type=.jpg" alt="Final"><p align="center"> Image Source: Mondroid Mobile</p>
+                                <p>
+                                    <p>  Our assignment this week was to create a kinetic sculpture that made use of an electronic circuit. One of my favorite childhood fairy tales was a Mongolian fable which features an Old Man and his Flying Horse. I liked the idea of making a flying horse because it has two separate 'motions' its gallop and its flapping wings. 
+                                </p>
                        
 						<h5> Stock & Gearbox </h5>
+                            <p>
+                                 We were provided a 3.3V DC motor as the actuation device for our sculpture. I needed to fabricate some kind of gearbox to transfer the motion of the shaft of the motor to any sculpture. So my next step was to choose between the available stock materials shown below.
+                            </p>
                             <img class="fit" src="images/week3/materials.png" alt="MaterialComparison">
-                                <p>
-                                     We were provided a 3.3V DC motor as the actuation device for our sculpture. I needed to fabricate some kind of gearbox to transfer the motion of the shaft of the motor to any sculpture. So my next step was to choose between the available stock materials shown above.
-                                    <br>
-                                    <br>
-                                    I realized after an inspection of the cardboard and plastic sheets that its cross-section is mostly hollow so that if I cut gear teeth into it, its  would likely not bear any weight.
-                                    
-                                    I gave the shaft of the motor a quick 'pinch-test' to try and estimate the total torque it might be able to provide. I decided that wood stock (not pictured) might be too heavy given the size of the motor.
-                                </p>
+                            <p>
+                                I saw noticed that the cross-sections of the plastic and cardboard was mostly hollow so if I cut gear teeth into it, it  would likely not bear any weight.
+
+                                I gave the shaft of the motor a quick 'pinch-test' to try and estimate the total torque it might be able to provide. I decided that wood stock (not pictured) might be too heavy given the size of the motor.
+                            </p>
                         
 							<img class="fit" src="images/week3/gearbox.jpeg" alt="Inspo">
                                 <p>
-                                    With my stock in mind, I obtained the design of a gear box that would provide the 'up-and-down' motion that I wanted for my sculpture. 
+                                I obtained a free-to-use design of a gear box that would convert the rotational motion of the motor to the 'rocking' motion of the sculpture. I downloaded the .pdf file provided by the <a href="https://www.instructables.com/Laser-Cut-Cupid/">creator of this design,</a> converted it to a .dtx to import to Fusion 360. Like last week, I used an overlay reference technique to then draw in the shape of a horse in the Sketch tool as shown below.
+                                The original project used thinner stock, so I adjusted a number of dimensions and removed some support pieces.
                                 </p>
-							<img class="fit" src="images/week2/process.png" alt="Process">
-							<p>
-								I downloaded its .pdf file, converted it to a .dtx to import to Fusion 360. Like last week, I used an overlay reference technique to draw the shape of a horse in the Sketch tool.
-							</p>
+							<img class="fit" src="images/week3/fusion.png" alt="Process">
+							    <p>
+                                Given the thickness of the acrylic, I used a 5mm/s speed on the laser cutting, which made for a total cut time of about ~20 minutes. Unfortunately, soon after lasercutting, I pulled out my pieces to realize that I had miscalculated the kerf on my circular pieces. This meant that the wooden rods I planned to use to secure the pieces together would be too loose. 
+                            
+                            <img class="fit" src="images/week3/assembly.png" alt="MaterialComparison">
+                                
+                                Given the time and material it required to re-attempt the laser cutting process, I decided to make do with the pieces I had. I applied hot glue and pressed the pieces flat using the table clamps as shown. I did get the opportunity to use more of the hand tools like the woodsaw and belt sander in order to adjust for the mis-fitting pieces, so in the end I was not upset.
+                                </p>
                         
-                        <h5> Soldering</h5>
-                            <img class="fit" src="images/week3/gearbox1.jpeg" alt="soldering">
-                                <p>
-                                      I began by soldering two lead wires onto the motor. Hot glue was layered onto the newly soldered joint to ensure stability.
-                                </p>
+                        <h5> Motor & Circuit</h5>
+                            <img class="fit" src="images/week3/shaft.png" alt="soldering">
+                            <p>
+                              Once the mechanical component of my sculpture was completed, I began on my motor and circuit. I began by soldering two lead wires onto the motor. Then, I needed to attach a gear to the stubby shaft that the motor game with. I used a micrometer and some trial-and-error with the laser printer before I got the right fit shown on the right.
+                            </p>
+                            <img class="fit" src="images/week3/circuit.png" alt="soldering">
+                            <p>
+                              My circuit is very simple, with only three main components. The potentiometer controlled the voltage delivered to the motor, and thus the sculpture's speed. As shown below, I set the total input voltage to 3.3V. The circuit's total current was around ~0.1A although it has a very high variance. This made sense since the motor has to provide more torque when the sculpture is being pushed up than when it is being brought down.
+                             </p>
+                            <img class="fit" src="images/week3/final.gif" alt="Final">
+                            <p>
+                              At the end of this week, I've learned to be more modular with my fabrication projects. I really should have cut out a test of the rod holes like I did with the motor gear. I am hoping to build on this project next week when we start on microcontroller programming. I look forward to returning to my little pegasus.
+                            </p>
+                                
+                            
+                           
 					</div>
 				</div>
 			</div>
