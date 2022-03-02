@@ -7,8 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -299,6 +298,10 @@ input, select, textarea {
 		hr.major {
 			margin: 3em 0;
 		}
+    iframe {
+        margin: 0 20%;
+        max-width: 60%;
+    }
 
 	.align-left {
 		text-align: left;
@@ -311,6 +314,8 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
+
+    
 
 	#main {
 		width: 100%;
@@ -325,6 +330,7 @@ input, select, textarea {
 		.div2 {
 		width: 67%;
 		}
+    
 
 /* Row */
 

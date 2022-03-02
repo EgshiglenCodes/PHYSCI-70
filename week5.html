@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Egshiglen Chuluunhuu
+-->
+<html>
+
+	<head>
+		<title>Week 5</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+	</head>
+
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="index.html">Projects</a></li>
+										<li><a href="about.html">About</a></li>
+										<!-- <li><a href="elements.html">Elements</a></li> -->
+									</ul>
+								</nav>
+						</div>
+					</header>
+
+					<div class="miniheader">
+						<div>
+						<h1>Week 5: 3D Design & Printing</h1>
+						</div>
+					</div>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h2> 3D Printed bronchia necklace </h2>
+                        
+                            <h5> Inspiration</h5>
+                            <img class="fit" src="https://cdn.wallpaper.com/main/2021/07/sche-feat.jpg" alt="Final"><p align="center"> Image Source: Schiaparelli</p>
+                            
+                            I've long been obsessed with Schiaparelli's ornate necklace shown above. The piece features a brionchial tree gilded in brass and it likely costs thousands of dollars and hundreds of hours of labor to create. I neither of these things, but this week I have access to a couple 3D printers and some gold-colored filament, so I thought this was the moment to come close to my Haute Couture dreams. I also thought that the small branches would be a good test for the limits of our printers, especially given that I couldn't imagine easily fabricating this shape with any other tools on hand.
+                            
+                            <h5> Neck Chain </h5>
+                            
+                                <p>For the chain, I wanted something that was scalable and linked together easily. With some scouring of free online respostories, I found two designs for a chain. The first was a <a  href="https://www.myminifactory.com/object/3d-print-print-in-place-chains-up-to-11-meters-65706">print-in-place design</a> that printed 50 cm of chain length at a time. . </p>
+                                    
+                                <img class="fit" src=images/week5/70mesh.png>
+                                <img class="fit" src=images/week5/3mesh.png>
+                                    
+                                <p>This was my first experience with 3D printing, so I was keen to really understand the different slicing and printing settings and how different combinations affected the final product. So to do some rapid testing, I needed to scale down the design above. I loaded the model of the 70 link chain into Fusion360. I had not used Mesh editing features before, but all I wanted to do was to cut down the parts until I had a 3 link chain, so I was able to proceed after some self-teaching. </p>
+                            
+                                <img class="fit" src=images/week5/3linkprint.PNG>
+
+                                <p>During this point of the project, I was working in the Lowell Makerspace, which uses a Makerbot Replicator+ printer. I downloaded its slicing software and loaded the 3 link chain scaled to 1.5cm and created the g-code with its default settings. The result is Number 1 in my set of testing iterations. While I could forsee some advantages to creating a print-in-place chain, this design seemed to require more support material and the orientation of each link was at an angle. </p>
+                                
+                                <img class="fit" src=images/week5/iterations.png> 
+                            
+                                <p> I was interested in printing out the chain as quickly as possible with as little material as possible. To this end, I went back online to find a simpler design. This <a href="https://www.thingiverse.com/thing:3834608"> modular design</a> printed each link separately but featured a notch to connect the links together. I imported the .stl file into MakerBot Print and tested a number of different print settings with the Makerbot. As can be seen, most of them resulted in a failed print, but it was educational experience to see the vast number of unique failures that can occur. I underlined the changes I made to the settings with each iteration.
+                                <br>
+                                <br>
+                                    <b>Print 2:</b> <u>Infill 0%</u>, 0.25mm line width, standard Raft base. My first and best print. I quickly learned that infill had a big impact on print time, so I was happy that 0% infill was possible for this design.
+                                <br>
+                                    <b>Print 3:</b> Infill 0%, <u>0.5mm line width, thin Raft base</u>. The roof of the structure seemed to collapse into itself, likely as a result of both the combination of no infill and a thick extrusion.
+                                <br>
+                                    <b>Print 4:</b> Infill 0%, 0.5mm line width, <u>no base</u>. I noticed that printing the first layer took a large chunk of time, so I decided to get rid of the base altogether. This is where I began to get some appreciation for print surface adhesion. Some Googling told me that z-axis calibration is important for first layer adhesion, but the MakerBot settings seemed a little difficult to fidget with so I left it alone and returned to printing with a Raft.
+                                <br>
+                                    <b>Print 5:</b> Infill 0%, 0.25mm line width, thin Raft base, <u>180C extrusion temperature</u>. The default print temperature was set at 215C, but the printer in Lowell had been having extruder overheating issues, so I wanted to see if I could print at a lower temperature. At some point during the print, the nozzle picked up the entire print and started moving with it. I imagine that perhaps the lower temperature affected the extrusion quality.
+                                <br>
+                                    <b>Print 6:</b> Infill 0%, 0.25mm line width, thin Raft base, <u>200C extrusion temperature, 80% scale</u>. I incremented the temperature up, but the model still ended up detaching from the base at some point. I also made the model smaller, so even with rafts, I guess the surface available to adhere was smaller.
+                                <br><br>
+                                    At the end of my evening of limit testing the Replicator+, I felt more confident with setting my own settings with slicing software and understanding why certain print components are necessary. At some point,  I also figured out how to load and unload the filament in the 3D printer.
+                                </p>
+                            
+                                <img class="fit" src=images/week5/10links.png>
+                                <p> Satisfied with my optimization of print settings, I came to the Science Center Makerspace to make sure of the Prusa printers. I laid out 10 links as shown above with 0% infill, default brim+skirt, and 0.3 mm line width. </p>
+                                
+                                <img class="fit" src=images/week5/10print.gif>
+                                <img class="fit" src=images/week5/10clean.png>
+                                
+                            
+                                <p>I repeated the print twice and removed the brims with a pair of pliers, leaving my chain links ready for final assembly. </p>
+                            
+                            
+                            <h5> Bronchial Tree </h5>
+                            
+                                <p>
+                                The second half of my project concerned the bronchial tree. I found a free-to-use model courtesy of a creator on <a href="https://sketchfab.com/thunthu">Sketchfab</a> (shown below). </p>
+
+                                <iframe title="Bronchi (collection of thunthu)" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/ec147b3fe06a41689711710024c1342a/embed?autospin=1&autostart=1"> </iframe>
+
+                                <p>
+                                The model downloaded in a .3ds format, which I learned my slicing software cannot process, so I used an <a href="https://anyconv.com/3ds-to-stl-converter/">online applet</a> to convert the model into the familiar .stl format. Due to the intricate branches of the model, I knew it would be a challenge to build the supports for my model. Nathan suggested using a dissolvable filament for the supports using the dual extrusion FlashForge 3D printer. </p>
+                                <img class="fit" src=images/week5/bronchi1.png>
+                                <p>
+                                Excited to try a new machine, I downloaded the FlashForge slicing software and watched a couple tutorials to learn how to set the extrusion settings. The software had a material-saving support generator called "tree" supports, which looked much more efficient than the traditional column supports. I was able to figure out how to set the supports to print with one filament and the model itself to print with another filament as shown above.  </p>
+                                <img class="fit" src=images/week5/2extruder.jpg>
+                                <p>
+                                Neither the dissolvable PVA filament and the gold-colored PLA filament were standard to the FlashForge printer, so it did not rack properly onto the back of the printer. Ibrahim and I scavenged some materials from around the lab to engineer a solution so the filaments stayed upright and untangled for the duration of the print. </p>
+                                <img class="fit" src=images/week5/bronchi2.gif>
+                                <p> It was super interesting to see the dual extruder at work. The 2 extruders takes turn working on each layer, so it does make for a longer print time. For a ballpark reference, my print was smaller than my palm and it took 5 hours. I noticed that the gold filament was printing well but that the dissolvable PVA filament was stringing as visible in the .gif above. I imagined that some adjustments to the filament temperature (I used the default 215C) or extrusion diameter might make be useful in future projects. </p>
+                                <img class="fit" src=images/week5/bronchi3.jpg>
+                                <img class="fit" src=images/week5/bronchi4.jpg>
+                                <p> Regardless of the stringing of the supprot filament, the print completed successfully. I dislodged the print and submerged the piece in room temperature and agitated my piece. The support filament quickly softened and began to flake off my model. Within 15 minutes, I had the support filament fully removed.  </p>
+                            
+                            <h5>Assembly & Final Product</h5>
+
+                                <img class="fit" src=images/week5/final1.jpg>
+                            
+                                <p> The chain links slotted together very well. The 0% fill actually gave the pieces some nice bend. I clipped the side of one of the links and fitted the end of the bronchial tree in. Because I did not design a clasp mechanism, I chose not to glue it down but the assembly was able to held itself together regardless.
+                                </p>
+                                <img class="fit" src=images/week5/final2.jpg>
+                                
+                                The size of the bronchial tree ended up a lot smaller than the original inspiration, mainly due to the small print bed of the FlashForge. In future, I might cut the piece into 2 before printing the lung halves larger. Overall, I am happy I was able to replicate such an intricate form with the 3D printers. It definitely served as proof as concept for a number of designs. The 3D printer has the clear advantage when fabricating more complex 3D models. However, the 3D printer is disadvantaged by the size of the printerbed and the generally long print times. Additionally, for more refined needs, say if I was machining a part for a motor, I would need to be much more careful with the print settings.
+							
+				            <h2> Photogrammetry </h2>
+                            
+                            As second assignment for this week was to scan an object using a phtoogrammetry application. I own an iPhone 8, which I learned does not have many of the sensing features that new photogrammetry apps rely on. After downloading and failing with a number of free apps from the App store, I finally got a successful scan using an app called <a href="https://apps.apple.com/tm/app/meshvideo-scan-real-objects/id1582378722">MeshVideo</a>. Gabby kindly lent me her 3D printed octopus which I set on a circular stool to create a make-shift 360 photobooth. I took a total of 35 images from a variety of angles. The processing in-app took about 1 hour. The app allowed me to export a video or a folder with a .obj and .png file. I tried and failed to get the .obj to display straight through .html using <a href="https://modelviewer.dev/">Model Viewer</a>, but my efforts were thrawted by an error that I supposedly can solve in Blender, but that may be can of worms for another day. 
+                            
+                            <img class="fit" src=images/week5/octo.gif>
+                            
+                            The legs of the octopus were captured well, although the back of its head was done in a little. For a model produced from 30 images, I was impressed with the result. 
+                            
+				        </div>
+					</div>
+			</div>
+	
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+	</body>
+</html>
